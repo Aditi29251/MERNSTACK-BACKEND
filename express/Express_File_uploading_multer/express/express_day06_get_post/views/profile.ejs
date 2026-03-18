@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card {
+            background: #ffffff;
+            width: 400px;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .profile-card h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .profile-item {
+            margin-bottom: 18px;
+            padding: 10px;
+            background: #f8f9fc;
+            border-radius: 8px;
+        }
+
+        .profile-item span {
+            display: block;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+
+        .profile-item p {
+            font-size: 15px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #4e73df;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: #2e59d9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile-card">
+        <h2>Student Details</h2>
+
+        <div class="profile-item">
+            <span>Full Name</span>
+            <p><%- data.name %></p>
+        </div>
+
+        <div class="profile-item">
+            <span>Email Address</span>
+            <p><%- data.email %></p>
+        </div>
+
+        <div class="profile-item">
+            <span>Password</span>
+            <p><%- data.password %></p>
+        </div>
+
+        <div class="profile-item">
+            <span>Mobile Number</span>
+            <p><%- data.mobile %></p>
+        </div>
+
+        <a href="/">Add more</a>
+    </div>
+
+</body>
+</html>

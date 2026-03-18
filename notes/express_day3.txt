@@ -1,0 +1,141 @@
+
+    <!-- syntax
+    logical code - if for looping conditon
+    
+    <% if () %>
+
+    <% } %>
+
+
+    2- as a html content 
+     <%- html %>
+
+    
+    3- as text content
+
+    <%= text content  %>
+
+    4- import one ejs into another 
+
+    <%- include('home.ejs') %>
+
+db.user.insertMany([
+    {
+        "name":"Aditi",
+        "email:"aditi@gmail.com",
+        "mob":97695859,
+        "Skill":"MERN",
+        "role":"Developer",
+        "address":"Pune"
+    }
+
+     {
+        "name":"Mayuri",
+        "email:"Mayuri@gmail.com",
+        "mob":97695859,
+        "Skill":"FullStack",
+        "role":"Developer",
+         "address":"Pune"
+    }
+
+     {
+        "name":"siddhi",
+        "email:"siddhi@gmail.com",
+        "mob":97695859,
+        "Skill":"SAP",
+        "role":"Fiannance",
+         "address":"Nashik"
+    }
+
+     {
+        "name":"rutuja",
+        "email:"rutu@gmail.com",
+        "mob":97695859,
+        "Skill":"MERN",
+        "role":"Developer",
+         "address":"Nashik"
+    }
+
+     {
+        "name":"sai",
+        "email:"sai@gmail.com",
+        "mob":97695859,
+        "Skill":"ReactJs",
+        "role":"Frontend Developer",
+         "address":"Mumbai"
+    }
+])
+
+
+([
+{
+"_id": { "$oid": "6704b91f4d3f1a0012345671" },
+"name": "Aarav Patel",
+"age": 22,
+"email": "[aarav.patel@example.com](mailto:aarav.patel@example.com)",
+"course": "MERN Stack",
+"batch": "B001",
+"mentor": "Pratik Sabale",
+"joiningDate": "2024-09-01",
+"fees": 12000,
+"status": "active",
+"skills": ["HTML", "CSS", "JavaScript"],
+"attendance": 90
+},
+{
+"_id": { "$oid": "6704b91f4d3f1a0012345672" },
+"name": "Riya Sharma",
+"age": 21,
+"email": "[riya.sharma@example.com](mailto:riya.sharma@example.com)",
+"course": "Python Full Stack",
+"batch": "B002",
+"mentor": "Shreeraj Jadhav",
+"joiningDate": "2024-08-15",
+"fees": 11000,
+"status": "active",
+"skills": ["Python", "Flask", "MySQL"],
+"attendance": 95
+},
+{
+"_id": { "$oid": "6704b91f4d3f1a0012345673" },
+"name": "Rahul Deshmukh",
+"age": 23,
+"email": "[rahul.deshmukh@example.com](mailto:rahul.deshmukh@example.com)",
+"course": "UI/UX Design",
+"batch": "B003",
+"mentor": "Rutvij Joshi",
+"joiningDate": "2024-07-20",
+"fees": 10000,
+"status": "inactive",
+"skills": ["Figma", "Canva", "Adobe XD"],
+"attendance": 60
+},
+{
+"_id": { "$oid": "6704b91f4d3f1a0012345674" },
+"name": "Sneha Kulkarni",
+"age": 20,
+"email": "[sneha.kulkarni@example.com](mailto:sneha.kulkarni@example.com)",
+"course": "ReactJS",
+"batch": "B004",
+"mentor": "Pratik Sabale",
+"joiningDate": "2024-09-10",
+"fees": 9000,
+"status": "active",
+"skills": ["React", "Bootstrap", "APIs"],
+"attendance": 88
+},
+{
+"_id": { "$oid": "6704b91f4d3f1a0012345675" },
+"name": "Karan Joshi",
+"age": 24,
+"email": "[karan.joshi@example.com](mailto:karan.joshi@example.com)",
+"course": "DevOps",
+"batch": "B005",
+"mentor": "Shreeraj Jadhav",
+"joiningDate": "2024-08-01",
+"fees": 15000,
+"status": "active",
+"skills": ["Docker", "Kubernetes", "AWS"],
+"attendance": 92
+}
+])

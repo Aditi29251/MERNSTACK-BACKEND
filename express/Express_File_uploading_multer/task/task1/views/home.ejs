@@ -1,0 +1,77 @@
+<%- include("partials/navbar.ejs") %>
+
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(90deg, #4e73df, #1cc88a);
+    color: white;
+    border-radius: 0 0 50% 50% / 0 0 10% 10%;
+  }
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  }
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  .hero a {
+    padding: 15px 30px;
+    background: #fff;
+    color: #1cc88a;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+  }
+  .hero a:hover {
+    background: #1cc88a;
+    color: #fff;
+    transform: translateY(-3px);
+  }
+
+  /* Courses Overview Card */
+  .overview {
+    max-width: 600px;
+    background: white;
+    margin: 40px auto;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  .overview h2 {
+    color: #4e73df;
+    margin-bottom: 15px;
+  }
+  .overview p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+</style>
+
+<!-- Hero Section -->
+<div class="hero">
+  <h1>Welcome to Course Portal</h1>
+  <p>Explore our top programming courses and boost your career!</p>
+  <a href="/courses">View All Courses</a>
+</div>
+
+<!-- Courses Overview Card -->
+<div class="overview">
+  <h2>Total Courses Available</h2>
+  <p><strong><%= total %></strong> professional courses designed for students and professionals.</p>
+</div>
+
+<%- include("partials/footer.ejs") %>

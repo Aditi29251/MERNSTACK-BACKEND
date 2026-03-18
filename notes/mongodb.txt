@@ -1,0 +1,371 @@
+test> use Sample_data
+switched to db Sample_data
+Sample_data> show collections
+Student
+Sample_data> db.Student.insertMany([
+| {
+|   _id: ObjectId("6704b91f4d3f1a0012345671"),
+|   name: "Aarav Patel",
+|   age: 22,
+|   email: "aarav.patel@example.com",
+|   course: "MERN Stack",
+|   batch: "B001",
+|   mentor: "Pratik Sabale",
+|   joiningDate: "2024-09-01",
+|   fees: 12000,
+|   status: "active",
+|   skills: ["HTML", "CSS", "JavaScript"],
+|   attendance: 90
+| },
+| {
+|   _id: ObjectId("6704b91f4d3f1a0012345672"),
+|   name: "Riya Sharma",
+|   age: 21,
+|   email: "riya.sharma@example.com",
+|   course: "Python Full Stack",
+|   batch: "B002",
+|   mentor: "Shreeraj Jadhav",
+|   joiningDate: "2024-08-15",
+|   fees: 11000,
+|   status: "active",
+|   skills: ["Python", "Flask", "MySQL"],
+|   attendance: 95
+| },
+| {
+|   _id: ObjectId("6704b91f4d3f1a0012345673"),
+|   name: "Rahul Deshmukh",
+|   age: 23,
+|   email: "rahul.deshmukh@example.com",
+|   course: "UI/UX Design",
+|   batch: "B003",
+|   mentor: "Rutvij Joshi",
+|   joiningDate: "2024-07-20",
+|   fees: 10000,
+|   status: "inactive",
+|   skills: ["Figma", "Canva", "Adobe XD"],
+|   attendance: 60
+| },
+| {
+|   _id: ObjectId("6704b91f4d3f1a0012345674"),
+|   name: "Sneha Kulkarni",
+|   age: 20,
+|   email: "sneha.kulkarni@example.com",
+|   course: "ReactJS",
+|   batch: "B004",
+|   mentor: "Pratik Sabale",
+|   joiningDate: "2024-09-10",
+|   fees: 9000,
+|   status: "active",
+|   skills: ["React", "Bootstrap", "APIs"],
+|   attendance: 88
+| },
+| {
+|   _id: ObjectId("6704b91f4d3f1a0012345675"),
+|   name: "Karan Joshi",
+|   age: 24,
+|   email: "karan.joshi@example.com",
+|   course: "DevOps",
+|   batch: "B005",
+|   mentor: "Shreeraj Jadhav",
+|   joiningDate: "2024-08-01",
+|   fees: 15000,
+|   status: "active",
+|   skills: ["Docker", "Kubernetes", "AWS"],
+|   attendance: 92
+| }
+| ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('6704b91f4d3f1a0012345671'),
+    '1': ObjectId('6704b91f4d3f1a0012345672'),
+    '2': ObjectId('6704b91f4d3f1a0012345673'),
+    '3': ObjectId('6704b91f4d3f1a0012345674'),
+    '4': ObjectId('6704b91f4d3f1a0012345675')
+  }
+}
+Sample_data> db.Student.find()
+[
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345671'),
+    name: 'Aarav Patel',
+    age: 22,
+    email: 'aarav.patel@example.com',
+    course: 'MERN Stack',
+    batch: 'B001',
+    mentor: 'Pratik Sabale',
+    joiningDate: '2024-09-01',
+    fees: 12000,
+    status: 'active',
+    skills: [ 'HTML', 'CSS', 'JavaScript' ],
+    attendance: 90
+  },
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345672'),
+    name: 'Riya Sharma',
+    age: 21,
+    email: 'riya.sharma@example.com',
+    course: 'Python Full Stack',
+    batch: 'B002',
+    mentor: 'Shreeraj Jadhav',
+    joiningDate: '2024-08-15',
+    fees: 11000,
+    status: 'active',
+    skills: [ 'Python', 'Flask', 'MySQL' ],
+    attendance: 95
+  },
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345673'),
+    name: 'Rahul Deshmukh',
+    age: 23,
+    email: 'rahul.deshmukh@example.com',
+    course: 'UI/UX Design',
+    batch: 'B003',
+    mentor: 'Rutvij Joshi',
+    joiningDate: '2024-07-20',
+    fees: 10000,
+    status: 'inactive',
+    skills: [ 'Figma', 'Canva', 'Adobe XD' ],
+    attendance: 60
+  },
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345674'),
+    name: 'Sneha Kulkarni',
+    age: 20,
+    email: 'sneha.kulkarni@example.com',
+    course: 'ReactJS',
+    batch: 'B004',
+    mentor: 'Pratik Sabale',
+    joiningDate: '2024-09-10',
+    fees: 9000,
+    status: 'active',
+    skills: [ 'React', 'Bootstrap', 'APIs' ],
+    attendance: 88
+  },
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345675'),
+    name: 'Karan Joshi',
+    age: 24,
+    email: 'karan.joshi@example.com',
+    course: 'DevOps',
+    batch: 'B005',
+    mentor: 'Shreeraj Jadhav',
+    joiningDate: '2024-08-01',
+    fees: 15000,
+    status: 'active',
+    skills: [ 'Docker', 'Kubernetes', 'AWS' ],
+    attendance: 92
+  }
+]
+Sample_data> db.Student.find({},{name:1,course:1,_id:0})
+[
+  { name: 'Aarav Patel', course: 'MERN Stack' },
+  { name: 'Riya Sharma', course: 'Python Full Stack' },
+  { name: 'Rahul Deshmukh', course: 'UI/UX Design' },
+  { name: 'Sneha Kulkarni', course: 'ReactJS' },
+  { name: 'Karan Joshi', course: 'DevOps' }
+]
+Sample_data> db.Student.find({course:"ReactJS"}).pretty()
+[
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345674'),
+    name: 'Sneha Kulkarni',
+    age: 20,
+    email: 'sneha.kulkarni@example.com',
+    course: 'ReactJS',
+    batch: 'B004',
+    mentor: 'Pratik Sabale',
+    joiningDate: '2024-09-10',
+    fees: 9000,
+    status: 'active',
+    skills: [ 'React', 'Bootstrap', 'APIs' ],
+    attendance: 88
+  }
+]
+Sample_data> db.Student.find({status:"active"}).pretty()
+[
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345671'),
+    name: 'Aarav Patel',
+    age: 22,
+    email: 'aarav.patel@example.com',
+    course: 'MERN Stack',
+    batch: 'B001',
+    mentor: 'Pratik Sabale',
+    joiningDate: '2024-09-01',
+    fees: 12000,
+    status: 'active',
+    skills: [ 'HTML', 'CSS', 'JavaScript' ],
+    attendance: 90
+  },
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345672'),
+    name: 'Riya Sharma',
+    age: 21,
+    email: 'riya.sharma@example.com',
+    course: 'Python Full Stack',
+    batch: 'B002',
+    mentor: 'Shreeraj Jadhav',
+    joiningDate: '2024-08-15',
+    fees: 11000,
+    status: 'active',
+    skills: [ 'Python', 'Flask', 'MySQL' ],
+    attendance: 95
+  },
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345674'),
+    name: 'Sneha Kulkarni',
+    age: 20,
+    email: 'sneha.kulkarni@example.com',
+    course: 'ReactJS',
+    batch: 'B004',
+    mentor: 'Pratik Sabale',
+    joiningDate: '2024-09-10',
+    fees: 9000,
+    status: 'active',
+    skills: [ 'React', 'Bootstrap', 'APIs' ],
+    attendance: 88
+  },
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345675'),
+    name: 'Karan Joshi',
+    age: 24,
+    email: 'karan.joshi@example.com',
+    course: 'DevOps',
+    batch: 'B005',
+    mentor: 'Shreeraj Jadhav',
+    joiningDate: '2024-08-01',
+    fees: 15000,
+    status: 'active',
+    skills: [ 'Docker', 'Kubernetes', 'AWS' ],
+    attendance: 92
+  }
+]
+Sample_data> db.Student.find({},{name:1,mentor:1,_id:0}).pretty()
+[
+  { name: 'Aarav Patel', mentor: 'Pratik Sabale' },
+  { name: 'Riya Sharma', mentor: 'Shreeraj Jadhav' },
+  { name: 'Rahul Deshmukh', mentor: 'Rutvij Joshi' },
+  { name: 'Sneha Kulkarni', mentor: 'Pratik Sabale' },
+  { name: 'Karan Joshi', mentor: 'Shreeraj Jadhav' }
+]
+Sample_data> db.Student.find({mentor:"Pratik Sabale"}).pretty()
+[
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345671'),
+    name: 'Aarav Patel',
+    age: 22,
+    email: 'aarav.patel@example.com',
+    course: 'MERN Stack',
+    batch: 'B001',
+    mentor: 'Pratik Sabale',
+    joiningDate: '2024-09-01',
+    fees: 12000,
+    status: 'active',
+    skills: [ 'HTML', 'CSS', 'JavaScript' ],
+    attendance: 90
+  },
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345674'),
+    name: 'Sneha Kulkarni',
+    age: 20,
+    email: 'sneha.kulkarni@example.com',
+    course: 'ReactJS',
+    batch: 'B004',
+    mentor: 'Pratik Sabale',
+    joiningDate: '2024-09-10',
+    fees: 9000,
+    status: 'active',
+    skills: [ 'React', 'Bootstrap', 'APIs' ],
+    attendance: 88
+  }
+]
+Sample_data> db.Student.find({batch:"B001"}).pretty()
+[
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345671'),
+    name: 'Aarav Patel',
+    age: 22,
+    email: 'aarav.patel@example.com',
+    course: 'MERN Stack',
+    batch: 'B001',
+    mentor: 'Pratik Sabale',
+    joiningDate: '2024-09-01',
+    fees: 12000,
+    status: 'active',
+    skills: [ 'HTML', 'CSS', 'JavaScript' ],
+    attendance: 90
+  }
+]
+Sample_data> db.Student.find({course:"MERN"}).pretty()
+
+Sample_data> db.Student.find({course:"MERN Stack"}).pretty()
+[
+  {
+    _id: ObjectId('6704b91f4d3f1a0012345671'),
+    name: 'Aarav Patel',
+    age: 22,
+    email: 'aarav.patel@example.com',
+    course: 'MERN Stack',
+    batch: 'B001',
+    mentor: 'Pratik Sabale',
+    joiningDate: '2024-09-01',
+    fees: 12000,
+    status: 'active',
+    skills: [ 'HTML', 'CSS', 'JavaScript' ],
+    attendance: 90
+  }
+]
+Sample_data> db.Student.find({},{name:1,course:1,email:1,_id:0}).pretty()
+[
+  {
+    name: 'Aarav Patel',
+    email: 'aarav.patel@example.com',
+    course: 'MERN Stack'
+  },
+  {
+    name: 'Riya Sharma',
+    email: 'riya.sharma@example.com',
+    course: 'Python Full Stack'
+  },
+  {
+    name: 'Rahul Deshmukh',
+    email: 'rahul.deshmukh@example.com',
+    course: 'UI/UX Design'
+  },
+  {
+    name: 'Sneha Kulkarni',
+    email: 'sneha.kulkarni@example.com',
+    course: 'ReactJS'
+  },
+  {
+    name: 'Karan Joshi',
+    email: 'karan.joshi@example.com',
+    course: 'DevOps'
+  }
+]
+
+Sample_data> db.Student.find({mentor:"Rutvij Hoshi"},{name:1,_id:0}).pretty()
+
+Sample_data> db.Student.find({mentor:"Rutvij Joshi"},{name:1,_id:0}).pretty()
+[ { name: 'Rahul Deshmukh' } ]
+
+
+//
+Sample_data> db.Student.deleteOne({name:"Sneha Kulkarni"})
+{ acknowledged: true, deletedCount: 1 }
+Sample_data> db.Student.find({name:"Sneha Kulkarnu"})
+
+Sample_data> db.Student.deleteMany({status:"inactive"})
+{ acknowledged: true, deletedCount: 1 }
+Sample_data> db.Student.find({status:"inactive"})
+
+Sample_data> db.Student.deleteMany({mentor:"Rutvij Joshi"})
+{ acknowledged: true, deletedCount: 0 }
+Sample_data> db.Student.find({mentor:"Rutvij Joshi"})
+
+Sample_data> db.Student.deleteMany({})
+{ acknowledged: true, deletedCount: 3 }
+Sample_data> db.Student.find()
+
+Sample_data>

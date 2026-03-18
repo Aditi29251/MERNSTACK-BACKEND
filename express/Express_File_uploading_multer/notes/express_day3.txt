@@ -1,0 +1,20 @@
+
+    <!-- syntax
+    logical code - if for looping conditon
+    
+    <% if () %>
+
+    <% } %>
+
+
+    2- as a html content 
+     <%- html %>
+
+    
+    3- as text content
+
+    <%= text content  %>
+
+    4- import one ejs into another 
+
+    <%- include('home.ejs') %>
