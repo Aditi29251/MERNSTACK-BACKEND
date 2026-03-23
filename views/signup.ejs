@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Sign Up</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#fafafa;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Container */
+.container{
+    width:100%;
+    max-width:350px;
+}
+
+/* Card */
+.card{
+    background:#fff;
+    border:1px solid #dbdbdb;
+    padding:35px 40px;
+    text-align:center;
+}
+
+/* Logo */
+.logo{
+    font-size:40px;
+    font-weight:600;
+    margin-bottom:15px;
+    font-family:cursive;
+}
+
+/* Subtitle */
+.subtitle{
+    font-size:14px;
+    color:#8e8e8e;
+    margin-bottom:20px;
+}
+
+/* Inputs */
+.input-box{
+    width:100%;
+    padding:10px;
+    margin-bottom:8px;
+    border:1px solid #dbdbdb;
+    border-radius:4px;
+    font-size:13px;
+    background:#fafafa;
+}
+
+.input-box:focus{
+    outline:none;
+    border:1px solid #a8a8a8;
+}
+
+/* Button */
+.btn{
+    width:100%;
+    background:#0095f6;
+    color:#fff;
+    border:none;
+    padding:8px;
+    margin-top:10px;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0077cc;
+}
+
+/* Terms text */
+.terms{
+    font-size:11px;
+    color:#8e8e8e;
+    margin-top:15px;
+    line-height:1.4;
+}
+
+/* Login box */
+.login{
+    margin-top:12px;
+    background:#fff;
+    border:1px solid #dbdbdb;
+    padding:18px;
+    text-align:center;
+    font-size:14px;
+}
+
+.login a{
+    text-decoration:none;
+    color:#0095f6;
+    font-weight:500;
+}
+
+/* Responsive */
+@media(max-width:400px){
+    .card{
+        border:none;
+    }
+    .login{
+        border:none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="logo">Instagram</div>
+        <div class="subtitle">
+            Sign up to see photos and videos from your friends.
+        </div>
+
+        <form action="/signup" method="POST">
+
+            <input type="text" name="userName" id="userName" class="input-box" placeholder="Username" required>
+
+            <input type="email" name="userEmail" id="userEmail" class="input-box" placeholder="Email">
+
+            <input type="password" name="userPass" id="userPass" class="input-box" placeholder="Password">
+
+            <input type="text" name="userPhone" id="userPhone" class="input-box" placeholder="Phone Number">
+
+            <button type="submit" class="btn">Sign Up</button>
+
+        </form>
+
+        <div class="terms">
+            By signing up, you agree to our Terms, Privacy Policy and Cookies Policy.
+        </div>
+
+    </div>
+
+    <div class="login">
+        Already have an account? <a href="/">Log in</a>
+    </div>
+
+</div>
+
+</body>
+</html>
