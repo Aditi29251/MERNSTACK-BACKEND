@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg, #0a66c2, #004182);
+}
+
+.signup-container{
+  background:#fff;
+  padding:30px;
+  width:350px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+.signup-container h2{
+  text-align:center;
+  margin-bottom:20px;
+  color:#0a66c2;
+}
+
+.input-group{
+  margin-bottom:15px;
+}
+
+.input-group label{
+  font-size:14px;
+  display:block;
+  margin-bottom:5px;
+}
+
+.input-group input{
+  width:100%;
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  font-size:14px;
+}
+
+.input-group input:focus{
+  outline:none;
+  border-color:#0a66c2;
+}
+
+button{
+  width:100%;
+  padding:10px;
+  border:none;
+  border-radius:25px;
+  background:#0a66c2;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+button:hover{
+  background:#004182;
+}
+
+.login-link{
+  text-align:center;
+  margin-top:15px;
+  font-size:14px;
+}
+
+.login-link a{
+  color:#0a66c2;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+@media(max-width:400px){
+  .signup-container{
+    width:90%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="signup-container">
+  <h2>Create Account</h2>
+
+  <form action="/saveform" method="get">
+
+    <div class="input-group">
+      <label>Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+    </div>
+
+    <div class="input-group">
+      <label>Email</label>
+      <input type="email"  id="useremail" name="useremail" placeholder="Enter your email" required>
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <input type="password" id="userpass" name="userpass" placeholder="Create password" required>
+    </div>
+
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <div class="login-link">
+    Already have an account? <a href="#">Login</a>
+  </div>
+</div>
+
+</body>
+</html>

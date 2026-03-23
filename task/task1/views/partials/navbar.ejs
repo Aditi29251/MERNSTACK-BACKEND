@@ -1,0 +1,79 @@
+<style>
+/* Navbar container */
+.navbar {
+  background: #1f2937; /* Dark gray background */
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Brand / Logo */
+.navbar .brand {
+  color: #fbbf24; /* Yellow accent */
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Navbar links container */
+.navbar .nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+/* Navbar links */
+.navbar .nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect: underline animation */
+.navbar .nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background: #fbbf24; /* Yellow underline */
+  transition: 0.3s;
+}
+
+.navbar .nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Mobile responsive: stack links */
+@media (max-width: 650px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .navbar .nav-links a {
+    width: 100%;
+    text-align: left;
+  }
+}
+</style>
+
+<nav class="navbar">
+  <a href="/" class="brand">CoursePortal</a>
+  <div class="nav-links">
+    <a href="/">Home</a>
+    <a href="/courses">Courses</a>
+    <a href="/about">About</a>
+  </div>
+</nav>

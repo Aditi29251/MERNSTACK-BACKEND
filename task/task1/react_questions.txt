@@ -1,0 +1,65 @@
+1. import react from('react')
+
+const app=()=>{
+
+    return(
+
+        <h1>Hello </h1>
+    )
+}
+2 .useState=()=>{
+
+    const[user,setUser]=useState(0)
+}
+
+3. useEffect=()=>{
+
+    //code
+}
+
+4. useEffect=(()=>{
+
+
+},[])
+
+5.useEffect=(()=>{
+
+
+},[])
+
+6.npm i react-router-dom
+<Routes>
+   <route/>
+</Routes>
+
+
+7.import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import About from './About';
+
+.<BrowserRouter>
+  <Routes>
+    <Route path="/" element={home/}/>
+    <Route path="/about" element={about/}/>
+  </Routes>
+</BrowserRouter>
+
+
+8.import { Link } from 'react-router-dom';
+
+<Link to="/about">Go to About</Link>
+
+
+9.import { useParams } from 'react-router-dom';
+
+const CourseDetails = () => {
+  const { id } = useParams();
+  return <div>Course ID: {id}</div>;
+};
+
+
+10.<div>
+  {condition ? <p>Condition is true!</p> : <p>Condition is false!</p>}
+</div>
+
+
